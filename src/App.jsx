@@ -31,11 +31,14 @@ export default function App(){
       {/* protected routes with navigation layout */}
       <Route element={<Layout />}>
         <Route path="/" element={<div>Home/Dashboard - TODO</div>} />
-        <Route path="/dashboard" element={<div>Dashboard - TODO</div>} />
+        <Route path="/shift" element={<div>Shift Management - TODO</div>} />
+        <Route path="/payroll" element={<div>Payroll - TODO</div>} />
+        <Route path="/tasks" element={<div>Tasks - TODO</div>} />
+        <Route path="/analytics" element={<div>Analytics - TODO</div>} />
         <Route path="/staff" element={<div>Staff List - TODO</div>} />
         <Route path="/staff/:employeeId" element={<div>Employee Detail - TODO</div>} />
-        <Route path="/orders" element={<div>Orders - TODO</div>} />
-        <Route path="/analytics" element={<div>Analytics - TODO</div>} />
+        <Route path="/vacation" element={<div>Vacation Requests - TODO</div>} />
+        <Route path="/sick-days" element={<div>Sick Days - TODO</div>} />
       </Route>
 
       {/* 404 catch-all */}

@@ -1,6 +1,7 @@
 const path = require('path');// module for resolving file paths
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // generate an HTML file that includes your bundle
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // copy static files
 
 module.exports = {
   // Entry point of the app
@@ -23,7 +24,10 @@ module.exports = {
   // conf for webpack-dev-server
   devServer: {
     // dir to serve static files from
-    static: './dist',
+    static: [
+      './dist',
+      './public' // Add public folder to static assets
+    ],
     // enable support for history API based routing (Router)
     historyApiFallback: true,
     // run the dev server on
@@ -48,6 +52,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        // Handle images and other assets
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   // imports don't need file extensions
@@ -59,6 +68,18 @@ module.exports = {
     // gen an HTML file from a template and injects the bundle
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    // Copy static files from public to dist
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'public',
+          to: '',
+          globOptions: {
+            ignore: ['**/index.html'], // Don't copy index.html since HtmlWebpackPlugin handles it
+          },
+        },
+      ],
     }),
   ],
 };
