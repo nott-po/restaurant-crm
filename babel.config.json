@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      // transpili js to be compatible with target browsers
+      "@babel/preset-env",
+      {
+        // which browsers/environments to support
+        "targets": "defaults",
+        // add only polyfills that are used in the code
+        "useBuiltIns": "usage",
+        //version of core-js polyfills to use
+        "corejs": 3
+      }
+    ],
+    [
+      // JSX and React syntax support
+      "@babel/preset-react",
+      {
+        // use React JSX transform (no React import needed)
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}
