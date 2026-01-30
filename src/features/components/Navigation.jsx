@@ -92,7 +92,7 @@ export default function Navigation() {
               }
           >
             <HiOutlineUsers className="nav-icon" />
-                    Staff
+                Employess
           </NavLink>
 
           <NavLink

@@ -2,6 +2,7 @@ import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import Navigation from "./features/components/Navigation";
 import Login from "./features/auth/Login";
 import ProtectedRoute from "./features/components/ProtectedRoute";
+import StaffList from "./features/pages/StaffList";
 
 function Layout(){
     return(
@@ -37,7 +38,7 @@ export default function App(){
         <Route path="/payroll" element={<div>Payroll - TODO</div>} />
         <Route path="/tasks" element={<div>Tasks - TODO</div>} />
         <Route path="/analytics" element={<div>Analytics - TODO</div>} />
-        <Route path="/staff" element={<div>Staff List - TODO</div>} />
+        <Route path="/staff" element={<StaffList />} />
         <Route path="/staff/:employeeId" element={<div>Employee Detail - TODO</div>} />
         <Route path="/vacation" element={<div>Vacation Requests - TODO</div>} />
         <Route path="/sick-days" element={<div>Sick Days - TODO</div>} />
