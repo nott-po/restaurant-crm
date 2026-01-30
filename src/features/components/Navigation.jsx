@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   HiOutlineHome,
   HiOutlineCalendar,
@@ -7,23 +8,31 @@ import {
   HiOutlineChartBar,
   HiOutlineUsers,
   HiOutlineGlobeAlt,
-  HiOutlineHeart
+  HiOutlineHeart,
+  HiOutlineLogout
 } from 'react-icons/hi';
+import { logout, selectUser } from '../auth/authSlice';
+import Logo from './Logo';
 
 export default function Navigation() {
-  // TODO: authentication state from Redux
-  // for now we assume user is always logged in
-  const isAuthenticated = true;
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const currentUser = useSelector(selectUser);
+
   const handleLogout = () => {
-    console.log('Logout clicked - TODO: implement');
+        const confirmLogout = window.confirm('Are you sure you want to log out?');
+
+        if (confirmLogout) {
+            dispatch(logout());
+            navigate('/login');
+
+            console.log('User logged out successfully');
+        }
   };
 
   return (
     <nav className="navigation">
-      <div className="nav-header">
-          <img src="/logo.svg" alt="Restaurant CRM Logo" className="nav-logo" />
-          <hr className="nav-divider" />
-      </div>
+            <Logo />
 
       <div className="nav-links">
               <NavLink
@@ -83,7 +92,7 @@ export default function Navigation() {
               }
           >
             <HiOutlineUsers className="nav-icon" />
-            Employess
+                    Staff
           </NavLink>
 
           <NavLink
@@ -106,11 +115,11 @@ export default function Navigation() {
             Sick days
           </NavLink>
 
-          {isAuthenticated && (
+                {/* Logout Button */}
               <button onClick={handleLogout} className="logout-btn">
+                    <HiOutlineLogout className="nav-icon" />
                 Logout
               </button>
-          )}
         </div>
       </nav>
   );

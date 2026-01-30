@@ -1,5 +1,7 @@
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import Navigation from "./features/components/Navigation";
+import Login from "./features/auth/Login";
+import ProtectedRoute from "./features/components/ProtectedRoute";
 
 function Layout(){
     return(
@@ -24,12 +26,12 @@ export default function App(){
       return (
     <Routes>
       {/* public routes - no navigation needed */}
-      <Route element={<PublicLayout />}>
-        <Route path="/login" element={<div>Login Page - TODO</div>} />
-      </Route>
+        <Route element={<PublicLayout />}>
+            <Route path="/login" element={<Login />} />
+        </Route>
 
       {/* protected routes with navigation layout */}
-      <Route element={<Layout />}>
+      <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
         <Route path="/" element={<div>Home/Dashboard - TODO</div>} />
         <Route path="/shift" element={<div>Shift Management - TODO</div>} />
         <Route path="/payroll" element={<div>Payroll - TODO</div>} />
