@@ -1,0 +1,235 @@
+.tables-page {
+  padding: 32px 40px;
+  max-width: 1400px;
+}
+
+.page-header-tables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-header-tables h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tables-grid-container {
+  background: #F9F9F9;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px 32px;
+  max-width: 1400px;
+}
+
+.table-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.table-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px 0 0 8px;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  border: 1px solid;
+  border-right: none;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-badge:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.status-badge.status-free {
+  background-color: #D3E79D;
+  color: #3d5a00;
+  border-color: #D3E79D;
+}
+
+.status-badge.status-occupied {
+  background-color: #FFE68E;
+  color: #000000;
+  border-color: #FFE68E;
+}
+
+.status-badge.status-reserved {
+  background-color: #FF5858;
+  color: #FFE8E8;
+  border-color: #FF5858;
+}
+
+.status-dropdown-table {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: -16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.status-dropdown-table button {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: white;
+  border: none;
+  text-align: left;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.status-dropdown-table button:hover {
+  background: #f9fafb;
+}
+
+.status-dropdown-table button:not(:last-child) {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.table-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  gap: 2px;
+}
+
+.table-time {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.table-arrow {
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+}
+
+.table-card.status-free {
+  background-color: #ffffff;
+  border: 1px solid #B1B1B1;
+}
+
+.table-card.status-occupied {
+  background-color: #FFF9E2;
+  border: 1px solid #B1B1B1;
+}
+
+.table-card.status-reserved {
+  background-color: #FFE8E8;
+  border: 1px solid #B1B1B1;
+}
+
+.table-card.status-reserved .table-number {
+  color: #000000;
+}
+
+.table-card.status-reserved .table-time {
+  color: #000000;
+}
+
+.table-card[data-table-number="A2"] {
+  grid-column: 6;
+  grid-row: 1;
+}
+
+.table-card[data-table-number="A1"] {
+  grid-column: 6;
+  grid-row: 3;
+  margin-left: 20px;
+}
+
+.table-card[data-table-number="6"],
+.table-card[data-table-number="7"],
+.table-card[data-table-number="8"],
+.table-card[data-table-number="9"],
+.table-card[data-table-number="10"] {
+  grid-row: 2;
+  transform: translateX(50%);
+}
+
+.table-card[data-table-number="6"]:hover,
+.table-card[data-table-number="7"]:hover,
+.table-card[data-table-number="8"]:hover,
+.table-card[data-table-number="9"]:hover,
+.table-card[data-table-number="10"]:hover {
+  transform: translateX(50%) translateY(-2px);
+}
+
+.table-card[data-table-number="11"] {
+  grid-row: 3;
+}
+
+.table-card[data-table-number="12"] {
+  grid-row: 3;
+}
+
+.table-card[data-table-number="13"] {
+  grid-row: 3;
+}
+
+.table-card[data-table-number="14"] {
+  grid-row: 3;
+}
+
+.table-card[data-table-number="15"] {
+  grid-row: 3;
+}
