@@ -1,0 +1,141 @@
+.dashboard-page {
+    padding: 24px;
+    max-width: 1400px;
+}
+
+.dashboard-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 16px 0;
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.quick-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-action-btn:hover {
+    background: #374151;
+}
+
+.not-found-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.not-found-content {
+    text-align: center;
+    max-width: 400px;
+}
+
+.not-found-code {
+    font-size: 120px;
+    font-weight: 700;
+    color: #e5e7eb;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.not-found-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 12px 0;
+}
+
+.not-found-message {
+    font-size: 15px;
+    color: #6b7280;
+    margin: 0 0 32px 0;
+    line-height: 1.6;
+}
+
+.not-found-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.not-found-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.not-found-btn.primary {
+    background: #1f2937;
+    color: white;
+    border: none;
+}
+
+.not-found-btn.primary:hover {
+    background: #374151;
+}
+
+.not-found-btn.secondary {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.not-found-btn.secondary:hover {
+    background: #f9fafb;
+}
+
+@media (max-width: 768px) {
+    .dashboard-page {
+        padding: 16px;
+    }
+
+    .quick-actions {
+        flex-direction: column;
+    }
+
+    .quick-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .not-found-code {
+        font-size: 80px;
+    }
+
+    .not-found-actions {
+        flex-direction: column;
+    }
+
+    .not-found-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
