@@ -15,20 +15,14 @@ module.exports = {
     // clean the output directory before emit
     clean: true,
     // public url of the output directory when referenced in a browser
-    publicPath: '/',
+    publicPath: 'auto',
   },
-  // dev mode for better debugging and unminified output
-  mode: 'development',
-  // gen source maps for easier debugging
-  devtool: 'inline-source-map',
-  // conf for webpack-dev-server
+
+  mode: 'production',
+  devtool: 'source-map',
+
   devServer: {
-    // dir to serve static files from
-    static: [
-      './dist',
-      './public' // Add public folder to static assets
-    ],
-    // enable support for history API based routing (Router)
+    static: ['./dist', './public'],
     historyApiFallback: true,
     // run the dev server on
     port: 3000,

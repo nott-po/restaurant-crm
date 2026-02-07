@@ -126,11 +126,4 @@ Deployment link: ADD_DEPLOYMENT_URL
 - Modular and readable structure
 - Responsive layout with native CSS
 
-## Quality Checks (Optional)
-
-- Lighthouse score 90+ in all categories
-- No HTML or CSS validation errors
-
 ## License
-
-ISC
