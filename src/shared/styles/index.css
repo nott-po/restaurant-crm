@@ -1,0 +1,15 @@
+@import './base.css';
+
+@import './layout.css';
+
+@import './components.css';
+
+@import '../../features/auth/login.css';
+@import '../../features/staff/staff.css';
+@import '../../features/tables/tables.css';
+@import '../../features/tables/table-detail.css';
+@import '../../features/branches/branches.css';
+@import '../../features/orders/orders.css';
+@import '../../features/dashboard/dashboard.css';
+
+@import './responsive.css';
