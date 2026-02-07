@@ -1,51 +1,54 @@
-import { Routes, Route, Outlet, Navigate } from "react-router-dom";
-import Navigation from "./features/components/Navigation";
-import Login from "./features/auth/Login";
-import ProtectedRoute from "./features/components/ProtectedRoute";
-import StaffList from "./features/pages/StaffList";
+import { Routes, Route, Outlet } from "react-router-dom";
+import Navigation from "./shared/ui/Navigation";
+import Login from "./features/auth/LoginPage";
+import ProtectedRoute from "./shared/ui/wrappers/ProtectedRoute";
+import ErrorBoundary from "./shared/ui/ErrorBoundary";
+import Dashboard from "./features/dashboard/DashboardPage";
+import StaffList from "./features/staff/StaffPage";
+import Tables from "./features/tables/TablesPage";
+import TableDetail from "./features/tables/TableDetailPage";
+import Orders from "./features/orders/OrdersPage";
+import Branches from "./features/branches/BranchesPage";
+import NotFound from "./shared/pages/NotFound";
 
 function Layout(){
     return(
-        <div className="app">
-            <Navigation/>
-            <main className="main-content">
-                <Outlet/>
-            </main>
-        </div>
-    )
+        <ErrorBoundary>
+            <div className="app">
+                <Navigation />
+                <main className="main-content">
+                    <Outlet />
+                </main>
+            </div>
+        </ErrorBoundary>
+    );
 }
 
 function PublicLayout(){
     return(
         <div className="public-layout">
-            <Outlet/>
+            <Outlet />
         </div>
-    )
+    );
 }
 
 export default function App(){
-      return (
-    <Routes>
-      {/* public routes - no navigation needed */}
-        <Route element={<PublicLayout />}>
-            <Route path="/login" element={<Login />} />
-        </Route>
+    return(
+        <Routes>
+            <Route element={<PublicLayout />}>
+                <Route path="/login" element={<Login />} />
+            </Route>
 
-      {/* protected routes with navigation layout */}
-      <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-        <Route path="/" element={<div>Home/Dashboard - TODO</div>} />
-        <Route path="/shift" element={<div>Shift Management - TODO</div>} />
-        <Route path="/payroll" element={<div>Payroll - TODO</div>} />
-        <Route path="/tasks" element={<div>Tasks - TODO</div>} />
-        <Route path="/analytics" element={<div>Analytics - TODO</div>} />
-        <Route path="/staff" element={<StaffList />} />
-        <Route path="/staff/:employeeId" element={<div>Employee Detail - TODO</div>} />
-        <Route path="/vacation" element={<div>Vacation Requests - TODO</div>} />
-        <Route path="/sick-days" element={<div>Sick Days - TODO</div>} />
-      </Route>
+            <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/staff" element={<StaffList />} />
+                <Route path="/tables" element={<Tables />} />
+                <Route path="/tables/:tableNumber" element={<TableDetail />} />
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/branches" element={<Branches />} />
+            </Route>
 
-      {/* 404 catch-all */}
-      <Route path="*" element={<div>404 - Page Not Found</div>} />
-    </Routes>
-  );
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    );
 }
