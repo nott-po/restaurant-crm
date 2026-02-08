@@ -114,7 +114,7 @@ Password: emilyspass
 
 ## Live Demo
 
-Deployment link: ADD_DEPLOYMENT_URL
+Deployment link: [ADD_DEPLOYMENT_URL](https://nott-po.github.io/restaurant-crm/)
 
 ## Requirements Coverage
 
