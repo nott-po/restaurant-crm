@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-color: var(--color-bg-primary);
 }
 
 .app {
@@ -21,9 +21,9 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: var(--spacing-10);
   overflow: auto;
-  margin-left: 280px;
+  margin-left: var(--nav-width);
 }
 
 .public-layout {
@@ -38,8 +38,8 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 200px;
-  color: #6b7280;
-  font-size: 16px;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-lg);
 }
 
 .sr-only {
@@ -55,8 +55,8 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #1f2937;
-  outline-offset: 2px;
+  outline: 2px solid var(--color-primary);
+  outline-offset: var(--spacing-1);
 }
 
 button:focus-visible,
@@ -64,6 +64,6 @@ a:focus-visible,
 input:focus-visible,
 select:focus-visible,
 [role="button"]:focus-visible {
-  outline: 2px solid #1f2937;
-  outline-offset: 2px;
+  outline: 2px solid var(--color-primary);
+  outline-offset: var(--spacing-1);
 }

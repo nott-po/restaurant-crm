@@ -1,21 +1,21 @@
 .mobile-menu-toggle {
   display: none;
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: var(--spacing-8);
+  left: var(--spacing-8);
   z-index: 1001;
   width: 44px;
   height: 44px;
   border: none;
-  background: #2d2d2d;
+  background: var(--color-primary-dark);
   color: white;
-  border-radius: 8px;
+  border-radius: var(--radius-lg);
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
+  font-size: var(--font-size-3xl);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
 }
 
 .mobile-menu-toggle:hover {
@@ -35,16 +35,16 @@
 
 @media (max-width: 1200px) {
   .tables-page {
-    padding: 24px;
+    padding: var(--spacing-12);
   }
 
   .table-detail-page {
-    padding: 24px;
+    padding: var(--spacing-12);
   }
 
   .tables-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: var(--spacing-10);
   }
 
   .table-card[data-table-number="A2"],
@@ -85,7 +85,7 @@
 @media (max-width: 1024px) {
   .tables-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: var(--spacing-8);
   }
 
   .table-card[data-table-number="A2"],
@@ -133,25 +133,25 @@
   }
 
   .amount-wrapper {
-    gap: 20px;
+    gap: var(--spacing-10);
   }
 
   .item-total {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .dish-info {
-    gap: 10px;
+    gap: var(--spacing-5);
   }
 
   .dish-image,
   .dish-image-img {
-    width: 36px;
-    height: 36px;
+    width: var(--spacing-18);
+    height: var(--spacing-18);
   }
 
   .dish-name {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .qty-btn {
@@ -186,7 +186,7 @@
 
   .navigation {
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: var(--transition-normal);
     z-index: 1000;
   }
 
@@ -196,19 +196,19 @@
 
   .main-content {
     margin-left: 0;
-    padding: 70px 16px 16px 16px;
+    padding: 70px var(--spacing-8) var(--spacing-8) var(--spacing-8);
   }
 
   .page-header,
   .page-header-tables {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: var(--spacing-8);
   }
 
   .page-header h1,
   .page-header-tables h1 {
-    font-size: 24px;
+    font-size: var(--font-size-3xl);
   }
 
   .header-actions {
@@ -218,25 +218,25 @@
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: var(--spacing-6);
   }
 
   .stat-card {
     height: 120px;
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .stat-value {
-    font-size: 36px;
+    font-size: var(--spacing-18);
   }
 
   .tables-grid-container {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .tables-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: var(--spacing-6);
   }
 
   .table-card[data-table-number="A2"],
@@ -267,25 +267,25 @@
 
   .orders-list {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: var(--spacing-8);
   }
 
   .tables-page {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .table-detail-page {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .table-detail-header-left h1 {
-    font-size: 20px;
+    font-size: var(--font-size-2xl);
   }
 
   .order-content {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding: 16px 12px 24px;
+    padding: var(--spacing-8) var(--spacing-6) var(--spacing-12);
   }
 
   .order-table {
@@ -314,22 +314,22 @@
   }
 
   .amount-wrapper {
-    gap: 20px;
+    gap: var(--spacing-10);
   }
 
   .item-total {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .dish-image,
   .dish-image-img {
-    width: 36px;
-    height: 36px;
+    width: var(--spacing-18);
+    height: var(--spacing-18);
     flex-shrink: 0;
   }
 
   .dish-name {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .qty-btn {
@@ -344,16 +344,16 @@
 
   .order-footer {
     flex-direction: column;
-    gap: 12px;
+    gap: var(--spacing-6);
     align-items: stretch;
     min-width: 700px;
   }
 
   .order-footer-box {
     flex-direction: column;
-    gap: 16px;
+    gap: var(--spacing-8);
     align-items: stretch;
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .total-value {
@@ -363,13 +363,13 @@
   .order-actions {
     flex-direction: row;
     justify-content: flex-end;
-    gap: 8px;
+    gap: var(--spacing-4);
   }
 
   .discount-btn,
   .check-order-btn {
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: var(--spacing-5) var(--spacing-10);
+    font-size: var(--font-size-sm);
     text-align: center;
   }
 
@@ -381,7 +381,7 @@
     width: 100%;
     max-height: 40vh;
     border-right: none;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--color-border-primary);
   }
 
   .branches-map {
@@ -389,13 +389,13 @@
   }
 
   .staff-page {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .table-controls {
     flex-direction: column;
-    gap: 8px;
-    padding: 12px;
+    gap: var(--spacing-4);
+    padding: var(--spacing-6);
   }
 
   .table-search {
@@ -421,7 +421,7 @@
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: var(--spacing-6);
   }
 
   .date-filter-select {
@@ -435,20 +435,20 @@
   }
 
   .mobile-menu-toggle {
-    top: 12px;
-    left: 12px;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    top: var(--spacing-6);
+    left: var(--spacing-6);
+    width: var(--spacing-20);
+    height: var(--spacing-20);
+    font-size: var(--font-size-2xl);
   }
 
   .main-content {
-    padding: 60px 12px 12px 12px;
+    padding: var(--spacing-30) var(--spacing-6) var(--spacing-6) var(--spacing-6);
   }
 
   .page-header h1,
   .page-header-tables h1 {
-    font-size: 20px;
+    font-size: var(--font-size-2xl);
   }
 
   .stats-grid {
@@ -461,30 +461,30 @@
   }
 
   .tables-grid-container {
-    padding: 12px;
+    padding: var(--spacing-6);
   }
 
   .tables-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: var(--spacing-5);
   }
 
   .table-card {
     min-height: 100px;
-    padding: 12px;
+    padding: var(--spacing-6);
   }
 
   .table-number {
-    font-size: 18px;
+    font-size: var(--font-size-xl);
   }
 
   .status-badge {
     font-size: 10px;
-    padding: 4px 8px;
+    padding: var(--spacing-2) var(--spacing-4);
   }
 
   .stat-card {
-    padding: 16px 20px;
+    padding: var(--spacing-8) var(--spacing-10);
   }
 
   .stat-value {
@@ -492,45 +492,45 @@
   }
 
   .stat-label {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .order-card {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .order-title h3 {
-    font-size: 16px;
+    font-size: var(--font-size-lg);
   }
 
   .total-amount {
-    font-size: 18px;
+    font-size: var(--font-size-xl);
   }
 
   .table-detail-page {
-    padding: 12px;
+    padding: var(--spacing-6);
   }
 
   .table-detail-header-left {
-    gap: 12px;
+    gap: var(--spacing-6);
   }
 
   .back-btn {
-    width: 36px;
-    height: 36px;
+    width: var(--spacing-18);
+    height: var(--spacing-18);
   }
 
   .table-detail-header-left h1 {
-    font-size: 18px;
+    font-size: var(--font-size-xl);
   }
 
   .table-subtitle {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 
   .order-content {
-    padding: 12px 8px 20px;
-    border-radius: 8px;
+    padding: var(--spacing-6) var(--spacing-4) var(--spacing-10);
+    border-radius: var(--radius-lg);
   }
 
   .order-table {
@@ -555,44 +555,44 @@
   }
 
   .order-table-header-row th {
-    padding: 0px 10px;
-    font-size: 12px;
+    padding: 0 var(--spacing-5);
+    font-size: var(--font-size-xs);
   }
 
   .order-item-row td {
-    padding: 12px 10px;
+    padding: var(--spacing-6) var(--spacing-5);
   }
 
   .dish-image,
   .dish-image-img {
-    width: 32px;
-    height: 32px;
+    width: var(--spacing-16);
+    height: var(--spacing-16);
   }
 
   .dish-info {
-    gap: 10px;
+    gap: var(--spacing-5);
   }
 
   .dish-name {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
   }
 
   .amount-wrapper {
-    gap: 16px;
+    gap: var(--spacing-8);
   }
 
   .item-total {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
 
   .qty-btn {
     width: 26px;
     height: 26px;
-    font-size: 14px;
+    font-size: var(--font-size-base);
   }
 
   .qty-value {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
     min-width: 18px;
   }
 
@@ -602,13 +602,13 @@
   }
 
   .category-header {
-    padding: 10px;
+    padding: var(--spacing-5);
   }
 
   .category-toggle {
     width: 22px;
     height: 22px;
-    font-size: 16px;
+    font-size: var(--font-size-lg);
   }
 
   .category-name {
@@ -617,26 +617,26 @@
 
   .order-footer {
     min-width: 650px;
-    padding: 16px 0 0 0;
+    padding: var(--spacing-8) 0 0 0;
   }
 
   .order-footer-box {
-    padding: 12px;
+    padding: var(--spacing-6);
   }
 
   .total-value {
-    font-size: 20px;
+    font-size: var(--font-size-2xl);
   }
 
   .order-actions {
     flex-direction: column;
-    gap: 8px;
+    gap: var(--spacing-4);
   }
 
   .discount-btn,
   .check-order-btn {
     width: 100%;
-    padding: 12px 16px;
+    padding: var(--spacing-6) var(--spacing-8);
   }
 
   .dish-info {
@@ -645,7 +645,7 @@
 
   .branches-header {
     flex-direction: column;
-    gap: 12px;
+    gap: var(--spacing-6);
     align-items: stretch;
   }
 
@@ -671,36 +671,36 @@
   }
 
   .login-card {
-    padding: 20px 16px;
+    padding: var(--spacing-10) var(--spacing-8);
   }
 
   .employee-info {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: var(--spacing-4);
   }
 
   .employee-avatar {
-    width: 32px;
-    height: 32px;
+    width: var(--spacing-16);
+    height: var(--spacing-16);
   }
 
   .login-container {
-    padding: 16px;
+    padding: var(--spacing-8);
   }
 
   .login-card {
-    padding: 24px;
+    padding: var(--spacing-12);
   }
 
   .login-header h1 {
-    font-size: 24px;
+    font-size: var(--font-size-3xl);
   }
 }
 
 @media (min-width: 1280px) {
   .tables-grid {
-    gap: 24px 40px;
+    gap: var(--spacing-12) var(--spacing-20);
   }
 
   .orders-list {

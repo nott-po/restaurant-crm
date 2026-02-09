@@ -1,48 +1,48 @@
 .tables-page {
-  padding: 32px 40px;
-  max-width: 1400px;
+  padding: var(--spacing-16) var(--spacing-20);
+  max-width: var(--content-max-width);
 }
 
 .page-header-tables {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-16);
 }
 
 .page-header-tables h1 {
-  font-size: 32px;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--spacing-8);
 }
 
 .tables-grid-container {
-  background: #F9F9F9;
-  border-radius: 8px;
-  padding: 24px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-12);
 }
 
 .tables-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 24px 32px;
-  max-width: 1400px;
+  gap: var(--spacing-12) var(--spacing-16);
+  max-width: var(--content-max-width);
 }
 
 .table-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 16px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition-fast);
   min-height: 120px;
   display: flex;
   flex-direction: column;
@@ -51,28 +51,28 @@
 
 .table-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
 }
 
 .table-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-4);
   position: relative;
 }
 
 .table-number {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
 }
 
 .status-badge {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 8px 0 0 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
   text-transform: capitalize;
   letter-spacing: 0.3px;
   border: 1px solid;
@@ -81,39 +81,39 @@
   top: -16px;
   right: -16px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: var(--transition-fast);
 }
 
 .status-badge:hover {
-  opacity: 0.9;
+  opacity: var(--opacity-light);
   transform: scale(1.05);
 }
 
 .status-badge.status-free {
-  background-color: #D3E79D;
-  color: #3d5a00;
-  border-color: #D3E79D;
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+  border-color: var(--color-success-bg);
 }
 
 .status-badge.status-occupied {
-  background-color: #FFE68E;
+  background-color: var(--color-warning-bg);
   color: #000000;
-  border-color: #FFE68E;
+  border-color: var(--color-warning-bg);
 }
 
 .status-badge.status-reserved {
-  background-color: #FF5858;
+  background-color: var(--color-accent-red);
   color: #FFE8E8;
-  border-color: #FF5858;
+  border-color: var(--color-accent-red);
 }
 
 .status-dropdown-table {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + var(--spacing-2));
   right: -16px;
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 100;
   overflow: hidden;
@@ -123,23 +123,23 @@
 .status-dropdown-table button {
   display: block;
   width: 100%;
-  padding: 10px 16px;
-  background: white;
+  padding: var(--spacing-5) var(--spacing-8);
+  background: var(--color-bg-primary);
   border: none;
   text-align: left;
-  font-size: 13px;
-  color: #374151;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
   cursor: pointer;
-  transition: background 0.2s;
-  font-weight: 500;
+  transition: var(--transition-fast);
+  font-weight: var(--font-weight-medium);
 }
 
 .status-dropdown-table button:hover {
-  background: #f9fafb;
+  background: var(--color-bg-tertiary);
 }
 
 .status-dropdown-table button:not(:last-child) {
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid var(--color-bg-hover);
 }
 
 .table-card-body {
@@ -148,28 +148,28 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: auto;
-  gap: 2px;
+  gap: var(--spacing-1);
 }
 
 .table-time {
-  font-size: 14px;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
 }
 
 .table-arrow {
-  width: 20px;
-  height: 20px;
-  color: #9ca3af;
+  width: var(--spacing-10);
+  height: var(--spacing-10);
+  color: var(--color-text-muted);
 }
 
 .table-card.status-free {
-  background-color: #ffffff;
+  background-color: var(--color-bg-primary);
   border: 1px solid #B1B1B1;
 }
 
 .table-card.status-occupied {
-  background-color: #FFF9E2;
+  background-color: var(--color-warning-light-bg);
   border: 1px solid #B1B1B1;
 }
 
